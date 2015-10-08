@@ -10,7 +10,8 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
-
+#from somewhere
+point((100,100))
 
 class point(Sprite):
     """
@@ -60,7 +61,6 @@ class SpaceGame(App):
         noline = LineStyle(0, black)
         bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
-        point((100,100))
 
     def step(self):
         for ship in self.getSpritesbyClass(point):
