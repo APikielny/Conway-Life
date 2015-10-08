@@ -1,7 +1,7 @@
 """
 conway.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Adam Pikielny
+Credit: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 Assignment:
 Write and submit a program that plays Conway's Game of Life, per 
 https://github.com/HHS-IntroProgramming/Conway-Life
@@ -12,7 +12,7 @@ SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 
 
-class SpaceShip(Sprite):
+class point(Sprite):
     """
     Animated space ship
     """
@@ -20,7 +20,7 @@ class SpaceShip(Sprite):
         Frame(227,0,292-227,125), 4, 'vertical')
 
     def __init__(self, position):
-        super().__init__(SpaceShip.asset, position)
+        super().__init__(point.asset, position)
         self.vx = 1
         self.vy = 1
         self.vr = 0.01
@@ -60,12 +60,10 @@ class SpaceGame(App):
         noline = LineStyle(0, black)
         bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
-        SpaceShip((100,100))
-        SpaceShip((150,150))
-        SpaceShip((200,50))
+        point((100,100))
 
     def step(self):
-        for ship in self.getSpritesbyClass(SpaceShip):
+        for ship in self.getSpritesbyClass(point):
             ship.step()
 
 
