@@ -25,17 +25,12 @@ class Conway(App):
     """
     def __init__(self, width, height):
         super().__init__(width, height)
-        black = Color(0, 1)
-        noline = LineStyle(0, black)
-        bg_asset = RectangleAsset(width, height, noline, black)
-        bg = Sprite(bg_asset, (0,0))
         
 class Cell(Sprite):
     """
     Animated space ship
     """
-    pixel = RectangleAsset("images/four_spaceship_by_albertov_with_thrust.png", 
-        Frame(227,0,292-227,125), 4, 'vertical')
+    pixel = RectangleAsset(5,5,noline,black)
 
     def __init__(self, position):
         super().__init__(SpaceShip.asset, position)
