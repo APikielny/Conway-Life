@@ -24,6 +24,9 @@ class Conway(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         Cell((100,100))
+        Cell((200,100))
+        Cell((300,100))
+        Cell((100,200))
         
 class Cell(Sprite):
     """
