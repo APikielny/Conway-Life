@@ -18,9 +18,6 @@ black = Color(0, 1)
 noline = LineStyle(0, black)
 
 class Conway(App):
-    """
-    Tutorial4 space game example.
-    """
     def __init__(self, width, height):
         super().__init__(width, height)
         Cell((100,100))
@@ -29,13 +26,12 @@ class Conway(App):
         Cell((100,200))
         
 class Cell(Sprite):
-    """
-    Animated space ship
-    """
     pixel = RectangleAsset(5,5,noline,black)
 
     def __init__(self, position):
         super().__init__(Cell.pixel, position)
+        Conway.listenKeyEvent("keydown", "space", self.#initiate cell)
+
 
 
 myapp = Conway(SCREEN_WIDTH, SCREEN_HEIGHT)
