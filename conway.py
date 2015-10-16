@@ -23,6 +23,7 @@ class Conway(App):
     """
     def __init__(self, width, height):
         super().__init__(width, height)
+        Cell((100,100))
         
 class Cell(Sprite):
     """
@@ -31,7 +32,7 @@ class Cell(Sprite):
     pixel = RectangleAsset(5,5,noline,black)
 
     def __init__(self, position):
-        super().__init__(SpaceShip.asset, position)
+        super().__init__(Cell.pixel, position)
 
 
 myapp = Conway(SCREEN_WIDTH, SCREEN_HEIGHT)
