@@ -42,7 +42,7 @@ class Cell(Sprite):
         #Conway.listenKeyEvent("keydown", "space", self.#initiate cell)
     def destroyornah(self):
         while True:
-            self.visible = False
+            self.visible = True
 
 myapp = Conway(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
