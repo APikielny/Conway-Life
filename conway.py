@@ -23,9 +23,9 @@ class Conway(App):
         super().__init__(width, height)
         #initiate with white?
         Cell((100,100))
-        Cell((200,100))
-        Cell((300,100))
         Cell((100,200))
+        Cell((100,300))
+        Cell((100,400))
     def step(self):
         for Cell in self.getSpritesbyClass():
             destroyornah()
