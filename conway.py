@@ -23,9 +23,9 @@ class Conway(App):
         super().__init__(width, height)
         #initiate with white?
         Cell((100,100))
-        Cell((100,200))
-        Cell((100,300))
-        Cell((100,400))
+        Cell((100,105))
+        Cell((100,110))
+        Cell((100,115))
     def step(self):
         for Cell in self.getSpritesbyClass():
             destroyornah()
@@ -40,7 +40,8 @@ class Cell(Sprite):
     def __init__(self, position):
         super().__init__(Cell.pixel, position)
         #Conway.listenKeyEvent("keydown", "space", self.#initiate cell)
-    def destroyornah(self):
+    
+    #need to get position from somewhere def destroyornah(self,self.x,self.y):
         while True:
             self.visible = True
 
