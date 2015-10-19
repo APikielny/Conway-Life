@@ -26,6 +26,9 @@ class Conway(App):
         Cell((200,100))
         Cell((300,100))
         Cell((100,200))
+    def step(self):
+        for Cell in self.getSpritesbyClass():
+            destroyornah()
      
     #def initiate("""change the attributes"""self, event):
         #self.color = black
@@ -37,6 +40,7 @@ class Cell(Sprite):
     def __init__(self, position):
         super().__init__(Cell.pixel, position)
         #Conway.listenKeyEvent("keydown", "space", self.#initiate cell)
+    def destroyornah(self):
 
 myapp = Conway(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
