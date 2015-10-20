@@ -26,9 +26,9 @@ class Conway(App):
         Cell((100,105))
         Cell((100,110))
         Cell((100,115))
-    def step(self):
-        for Cell in self.getSpritesbyClass():
-            destroyornah()
+    #def step(self):
+        #for Cell in self.getSpritesbyClass():
+            #destroyornah()
      
     #def initiate("""change the attributes"""self, event):
         #self.color = black
