@@ -22,8 +22,8 @@ class Conway(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         #initiate with white?
-        for x in range(0,500,7):
-            for y in range(0,500,7):
+        for x in range(0,100,11):
+            for y in range(0,100,11):
                 Cell((x,y))
         
     def step(self):
@@ -34,8 +34,8 @@ class Conway(App):
         #self.color = black
         
 class Cell(Sprite):
-    pixel = RectangleAsset(5,5,noline,black)
-    nopixel = RectangleAsset(5,5,noline,white)
+    pixel = RectangleAsset(10,10,noline,black)
+    #nopixel = RectangleAsset(5,5,noline,white)
 
     def __init__(self, position):
         super().__init__(Cell.pixel, position)
