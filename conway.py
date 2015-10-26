@@ -23,8 +23,8 @@ class Conway(App):
         super().__init__(width, height)
         #initiate with white?
         for x in range(0,500,7):
-            for y in range(0,100,7)
-            Cell((x,y))
+            for y in range(0,100,7):
+                Cell((x,y))
         
     def step(self):
         for Cell in self.getSpritesbyClass():
