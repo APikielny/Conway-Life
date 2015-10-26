@@ -21,14 +21,21 @@ noline = LineStyle(0, black)
 class Conway(App):
     def __init__(self, width, height):
         super().__init__(width, height)
+        Cell((0,100))
+        Cell((10,100))
+        Cell((20,100))
         #initiate with white?
-        for x in range(0,100,11):
-            for y in range(0,100,11):
-                Cell((x,y))
+        #for x in range(0,100,11):
+            #for y in range(0,100,11):
+                #Cell((x,y))
         
     def step(self):
         for Cell in self.getSpritesbyClass():
             Cell.destroyornah()
+            
+    #def mouseClick(event):
+        #Cell.x=event.x
+        #Cell.y=event.y
      
     #def initiate("""change the attributes"""self, event):
         #self.color = black
@@ -43,6 +50,6 @@ class Cell(Sprite):
     
     #def destroyornah(self):
         
-
+#myapp.listenMouseEvent('click',mouseClick)
 myapp = Conway(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
